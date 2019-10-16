@@ -214,6 +214,7 @@ namespace Bascis
             for (int i = 0; i < arr.Length; i++)
             {
                  Console.WriteLine(arr[i]);
+
             }
         }
         static bool DivisibilityCheck(int n1,int n2)
