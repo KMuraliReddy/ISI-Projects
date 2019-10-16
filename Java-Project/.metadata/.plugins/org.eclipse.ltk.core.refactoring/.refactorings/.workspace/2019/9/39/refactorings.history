@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TicTocTo_class&apos; to &apos;TicTacToe(K.Murali,S.Sai Prasad Reddy,MD Arif,K.Premsai)&apos;" description="Rename resource &apos;TicTocTo_class&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/TicTocTo_class" name="TicTacToe(K.Murali,S.Sai Prasad Reddy,MD Arif,K.Premsai)" stamp="1569264084966" updateReferences="true"/>
+</session>

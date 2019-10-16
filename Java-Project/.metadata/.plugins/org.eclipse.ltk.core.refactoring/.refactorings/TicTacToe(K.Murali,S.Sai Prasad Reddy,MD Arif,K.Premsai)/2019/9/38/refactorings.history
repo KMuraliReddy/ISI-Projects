@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;collun&apos; in &apos;com.java.isi.Tictoctoe.TicTocToe.setActionListenersToButtons(...)&apos; to &apos;collum&apos;&#x0D;&#x0A;- Original project: &apos;TicTocTo_class&apos;&#x0D;&#x0A;- Original element: &apos;com.java.isi.Tictoctoe.TicTocToe.setActionListenersToButtons(int).collun&apos;&#x0D;&#x0A;- Renamed element: &apos;collun&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;collun&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.java.isi.Tictoctoe{TicTocToe.java[TicTocToe~setActionListenersToButtons~I@collun!4326!4369!4330!4335!I!0!false" name="collum" references="true" stamp="1568819420672" version="1.0"/>
+</session>

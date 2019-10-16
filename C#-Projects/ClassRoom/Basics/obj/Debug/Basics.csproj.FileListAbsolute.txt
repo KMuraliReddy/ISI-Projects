@@ -1,0 +1,6 @@
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Basics\bin\Debug\Basics.exe.config
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Basics\bin\Debug\Basics.exe
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Basics\bin\Debug\Basics.pdb
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Basics\obj\Debug\Basics.csprojAssemblyReference.cache
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Basics\obj\Debug\Basics.exe
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Basics\obj\Debug\Basics.pdb

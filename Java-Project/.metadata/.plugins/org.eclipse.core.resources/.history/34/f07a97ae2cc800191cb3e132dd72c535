@@ -1,0 +1,147 @@
+package com.isi.Airplane;
+
+public class Airplane {
+
+
+	private double altitude=0;
+	private boolean started=false;
+	private boolean landed=true;
+	private boolean exploded=false;
+
+
+	public double getAltitude() {
+		return altitude;
+	}
+
+	public boolean isStarted() {
+		if(started==true) {
+			return true;
+		}
+		else 
+			return false;	
+	}
+
+	public boolean isLanded() {
+		if(landed==true) {
+			return true;
+		}
+		else
+			return false;
+	}
+
+	public boolean isExploded() {
+		if(exploded==true) {
+			altitude=0;
+			return true;
+		}
+		else 
+			return false;
+	}
+
+	public void start() {
+		// TODO Auto-generated method stub
+		if(isStarted()==true ) {
+			System.out.println("The Airplane is already started");
+		}
+		else if(isExploded()==true){
+
+			System.out.println("Airplane crashed!!!");
+		}
+		else {
+			started=true;
+			System.out.println("The Airplane Has Started Now!!");
+		}
+
+
+	}
+	public void stop() {
+		// TODO Auto-generated method stub
+		if(isExploded()==true) {
+			System.out.println("Airplane crashed");
+		}
+		else if(isStarted()==true){
+
+			System.out.println("The Airplane has not started yet!!!");
+		}
+		else {
+			started=false;
+			System.out.println("The Airplane has stooped now");
+		}
+	}
+	public void takeOff() {
+		// TODO Auto-generated method stub
+		if(isStarted()==true && isLanded()==true && !exploded) {
+			setAltitude();
+			System.out.println("TakeOff Succesfull with an altitude of "+altitude);
+
+		}
+		else {
+			System.out.println("The Airplane has not started yet or exploded");
+		}
+
+
+	}
+
+	public void stopMotor() {
+		// TODO Auto-generated method stub
+		if(isStarted()==false) {
+			System.out.println("The Airplane is already stopped!!");
+		}
+		else if(!isExploded()) {
+			started=false;
+			System.out.println("The Airplane has been stopped !!!");
+		}
+		else {
+			System.out.println("The Airplane has exploded !!!");
+		}
+
+	}
+
+	public void increaseAltitude() {
+		// TODO Auto-generated method stub
+		if(exploded==true ) {
+			System.out.println("The Airplane has Exploded, You Cant Increase The Altitude.");
+		}
+		else if(altitude==9000) {
+			System.out.println("Danger!! You Are Reaching 10000 Altitude");
+			altitude=altitude+1000;
+		}
+		else if(altitude==11000) {
+			altitude=altitude+1000;
+			exploded=true;
+			System.out.println("BOOM!!!!!");
+		}
+		else if(altitude >=1000 ) {
+			System.out.println("The Altitude is increased");
+			altitude=altitude+1000;
+		}
+		else if(isStarted()==true && altitude==0) {
+			System.out.println("The Airplane Should Take Off First ");
+		}
+
+	}
+
+	public void decreaseAltitude() {
+
+		// TODO Auto-generated method stub
+		if(exploded==true) {
+			System.out.println("The Airplane has Exploded, You Cant Decrease The Altitude.");
+		}
+
+		else	if(altitude==1000) {
+			System.out.println("Airplane is gonna land be caeful!!!!");
+			altitude=altitude-1000;
+			landed=true;
+		}
+		else if(altitude>1000) {
+			System.out.println("The Altitude has been decreased !!");
+			altitude=altitude-1000;
+		}
+
+
+	}
+	private void setAltitude() {
+		altitude=2000;
+	}
+
+}

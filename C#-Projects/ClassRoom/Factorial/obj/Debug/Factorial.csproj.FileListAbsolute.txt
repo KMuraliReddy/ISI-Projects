@@ -1,0 +1,6 @@
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Factorial\bin\Debug\Factorial.exe.config
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Factorial\bin\Debug\Factorial.exe
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Factorial\bin\Debug\Factorial.pdb
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Factorial\obj\Debug\Factorial.exe
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Factorial\obj\Debug\Factorial.pdb
+C:\Users\mkotha\Documents\Projects\C#-Projects\ClassRoom\Factorial\obj\Debug\Factorial.csprojAssemblyReference.cache

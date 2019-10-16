@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Airplane_Exceptions&apos; to &apos;Airplane_Swing_Exceptions&apos;" description="Rename resource &apos;Airplane_Exceptions&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Airplane_Exceptions" name="Airplane_Swing_Exceptions" stamp="1567640941400" updateReferences="true"/>
+</session>

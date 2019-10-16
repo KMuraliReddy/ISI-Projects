@@ -1,0 +1,6 @@
+package com.isi.Airplane;
+
+public enum AirplaneAction {
+
+	START,STOP,TAKEOFF,INCREASEALTITUDE,DecreaseAltitude,Exit
+}
