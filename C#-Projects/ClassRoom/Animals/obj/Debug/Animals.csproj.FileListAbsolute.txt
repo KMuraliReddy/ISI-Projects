@@ -1,0 +1,6 @@
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Animals\bin\Debug\Animals.exe.config
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Animals\bin\Debug\Animals.exe
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Animals\bin\Debug\Animals.pdb
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Animals\obj\Debug\Animals.csprojAssemblyReference.cache
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Animals\obj\Debug\Animals.exe
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Animals\obj\Debug\Animals.pdb

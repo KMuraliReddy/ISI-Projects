@@ -1,0 +1,6 @@
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Shapes\bin\Debug\Shapes.exe.config
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Shapes\bin\Debug\Shapes.exe
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Shapes\bin\Debug\Shapes.pdb
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Shapes\obj\Debug\Shapes.csprojAssemblyReference.cache
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Shapes\obj\Debug\Shapes.exe
+C:\Users\mkotha\Documents\Git\ISI-Projects\C#-Projects\ClassRoom\Shapes\obj\Debug\Shapes.pdb
