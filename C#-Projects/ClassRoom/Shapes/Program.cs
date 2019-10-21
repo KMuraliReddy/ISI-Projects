@@ -79,6 +79,7 @@ namespace Shapes
             Console.WriteLine("Square Area And Perimeters Are : " + square_area + " :" + square_perimeter);
             Console.WriteLine("Square Area And Perimeters Are : " + square_area + " :" + square_perimeter+"murali git");
             Console.WriteLine("Square Area And Perimeters Are : " + square_area + " :" + square_perimeter + "murali git");
+            Console.WriteLine("Square Area And Perimeters Are : " + square_area + " :" + square_perimeter + "murali git new");
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);
 
