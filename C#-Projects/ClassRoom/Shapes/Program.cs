@@ -78,6 +78,7 @@ namespace Shapes
             Console.WriteLine("RightTriangle Area And Perimeters Are : " + RightTriangle_area + " :" + RightTriangle_perimeter);
             Console.WriteLine("Square Area And Perimeters Are : " + square_area + " :" + square_perimeter);
             //hai
+            //hello
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);
 
