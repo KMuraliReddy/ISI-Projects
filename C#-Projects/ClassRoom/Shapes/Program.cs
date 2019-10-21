@@ -10,6 +10,12 @@ namespace Shapes
     {
         static void Main(string[] args)
         {
+            string name = null;
+            int[] arr = new int[5];
+            Console.WriteLine(arr[0]+"murali");
+            float d = 6.555f;
+            
+           
             List<Circle> circle = new List<Circle>();
             List<Rectangle> rectangle = new List<Rectangle>();
             List<RightTriangle> rightTriangle = new List<RightTriangle>();
@@ -49,8 +55,8 @@ namespace Shapes
             foreach (Square s in square)
             {
 
-                square_area = circle_area+ s.CalculateArea();
-               square_perimeter= circle_perimeter+ s.CalculatePerimeter();
+               square_area = square_area + s.CalculateArea();
+               square_perimeter= square_perimeter + s.CalculatePerimeter();
             }
             foreach (Circle c in circle)
             {

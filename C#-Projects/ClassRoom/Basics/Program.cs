@@ -8,9 +8,10 @@ namespace Bascis
 {
     class Program
     {
-
+        public enum Test { h,j,s,k}
         static void Main(string[] args)
         {
+           
             int number = GetUserInt("Enter a number to find the factorial");
             int fact = Factorial(number);
             DisplayFunction("Factorial is : " + fact);
@@ -19,7 +20,7 @@ namespace Bascis
             DisplayFunction("The Max Is : " + ReturnMax(1, 2, 6, 3, 4, 8, 500).ToString());
             DisplayFunction("The Min Is : " + ReturnMin(1, 2, 6, 3, 4, 8, 50).ToString());
             DisplayFunction("The Average Is : " + ReturnAvg(3, 4).ToString());
-           // below block of code changes the original value of the variables
+            // below block of code changes the original value of the variables
             int myMin = 0;
             int myMax = 0;
             float myAvg = 0;
@@ -29,27 +30,30 @@ namespace Bascis
             Console.WriteLine(myAvg);
 
             // code ends
-            int x = 5;
-            int y = 10;
+            int x = 10;
+            int y = 5;
             Console.WriteLine("Before Swapping : " + x + " " + y);
             SwapInt(ref x, ref y);
             Console.WriteLine("After Swapping : " + x + " " + y);
 
-            int[] array1 = {1, 2, 3};
-            int[] array2 = { 1, 2, 3};
-           
-            Console.WriteLine( CompareIntArrays(array1,array2));
+            int[] array1 = { 1, 2, 3 };
+            int[] array2 = { 1, 2, 3 };
+
+            Console.WriteLine(CompareIntArrays(array1, array2));
 
             Console.WriteLine(PrimeCheck(15));
 
-            int[] array=MakeIntArray(5);
+            int[] array = MakeIntArray(5);
             DisplayArray(array);
             PrimeNumbers(6);
-            Console.WriteLine("The Divisibility Check Is: "+DivisibilityCheck(8, 2));
+            Console.WriteLine("The Divisibility Check Is: " + DivisibilityCheck(8, 2));
+            
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);
 
         }
+
+       
         //This Method takes an integer input from the user
         static int GetUserInt(string message)
         {
@@ -223,6 +227,10 @@ namespace Bascis
             if (n1 % n2 == 0)
                divisible = true; 
             return divisible;
+        }
+        static int myfunc(int a,double b)
+        {
+            return (int)(a + b);
         }
     }
 }
