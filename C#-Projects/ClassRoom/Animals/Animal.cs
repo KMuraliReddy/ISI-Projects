@@ -8,20 +8,39 @@ namespace Animals
 {
     class Animal
     {
-         public string name;
-         public int age;
-         public string species;
+        
+        protected string Name { get; private set ;  }
 
-        public Animal(int age,string name,string species)
+        protected int Age
         {
-            this.age = age;
-            this.name = name;
-            this.species = species;                       
+            get
+            {
+                return Age;
+            }
+            private set
+            {
+                if (value < 0)
+                    Age = 0;
+                else
+                    Age = value;
+
+            }
+        }
+        protected string Species { get; private set; }
+
+    public Animal(int age, string name, string species)
+        {
+            this.Age = age;
+            this.Name = name;
+            this.Species = species;
 
         }
+       
+      
         public void Display()
         {
-            Console.WriteLine(name + " is of the species " + species + " and is "+age+" years old");
+            Console.WriteLine(Name + " is of the species " + Species + " and is " + Age + " years old");
         }
+
     }
 }
