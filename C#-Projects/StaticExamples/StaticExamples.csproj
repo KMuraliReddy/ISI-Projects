@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{628FDFFC-E435-4DC4-8861-D5BE1CBFB6BB}</ProjectGuid>
+    <ProjectGuid>{27D51DAF-8E3E-4DC4-BE2D-D7CB17A94D0C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Animals</RootNamespace>
-    <AssemblyName>Animals</AssemblyName>
+    <RootNamespace>StaticExamples</RootNamespace>
+    <AssemblyName>StaticExamples</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="AnimalManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Employee.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
