@@ -30,6 +30,7 @@ namespace LearningWpf
         void BindData()
         {
             testDataGrid.ItemsSource = PeopleManager.people;
+            OccupationCombo.ItemsSource = Enum.GetValues(typeof(Occupation));
         }
         private void MyTextButton_Click(object sender, RoutedEventArgs e)
         {
@@ -44,17 +45,20 @@ namespace LearningWpf
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-           
-            if (FName.Text == "" && LName.Text == "")
+        
+         
+
+            if (FName.Text == "" && LName.Text == "" )
             {
-                MessageBox.Show("Please Enter FirstName and Last Name","Empty Fields");
+                MessageBox.Show("Please Enter FirstName and Last Name", "Empty Fields");
             }
             else
             {
-                PeopleManager.people.Add(new Person(FName.Text, LName.Text));
+                PeopleManager.people.Add(new Person(FName.Text, LName.Text, (Occupation)(OccupationCombo.SelectedItem)));
                 UpdateDataGrid();
                 FName.Text = "";
                 LName.Text = "";
+
             }
         }
         private void UpdateDataGrid()
@@ -63,8 +67,11 @@ namespace LearningWpf
             testDataGrid.ItemsSource = PeopleManager.people;
         }
 
-      
-
-       
+        private void NewClass_Click(object sender, RoutedEventArgs e)
+        {
+            ExampleWindow eW = new ExampleWindow();
+            eW.Show();
+            this.Hide();
+        }
     }
 }

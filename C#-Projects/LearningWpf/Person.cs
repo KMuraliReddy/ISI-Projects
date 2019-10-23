@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace LearningWpf
 {
+    public enum Occupation { Juvenile, Student, Professional, Retired }
     class Person
     {
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-
+       
         public Boolean IsAlive { get; private set; } = true;
-        public Person(string fName,string lName)
+        public Occupation CurrentOcuupation { get; private set; }
+        public Person(string fName,string lName,Occupation occupation)
         {
             FirstName = fName;
             LastName = lName;
+            CurrentOcuupation = occupation;
 
         }
     }

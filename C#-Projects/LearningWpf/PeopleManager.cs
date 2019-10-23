@@ -10,18 +10,10 @@ namespace LearningWpf
     {
      public  static List<Person> people = new List<Person>()
         {
-        new Person("Eric","ttttt"),
-        new Person("PEric","sdkbdjk"),
-        new Person("askf","asfasbfj"),
-        new Person("asbasf","askcbasjkfggggggggggggggg"),
-        new Person("sdlasb","as,ksabfjk"),
-        new Person("EDSLJB","AFLKJB"),
-         new Person("Eric","ttttt"),
-        new Person("PEric","sdkbdjk"),
-        new Person("askf","asfasbfj"),
-        new Person("asbasf","askcbasjkf"),
-        new Person("sdlasb","as,ksabfjk"),
-        new Person("EDSLJB","AFLKJB")
+        new Person("Eric","ttttt",Occupation.Juvenile),
+        new Person("PEric","sdkbdjk",Occupation.Student),
+        new Person("askf","asfasbfj",Occupation.Professional),
+        new Person("asbasf","askcbasjkfggggggggggggggg",Occupation.Retired)
     };
 }
 }

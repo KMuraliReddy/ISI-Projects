@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LearningWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="1000"
         FontSize="30"
         >
     <Grid >
@@ -29,6 +29,8 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Button Name="Test" Content="Submit" Grid.Row="1" Grid.Column="1" Click="MyTextButton_Click"></Button>
@@ -38,8 +40,7 @@
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding LastName,Mode=OneWay}" Width="1*"/>
                 <DataGridCheckBoxColumn Header="Alive?" Binding="{Binding IsAlive,Mode=OneWay}" Width="1*"/>
-
-
+                <DataGridTextColumn Header="Occupation" Binding="{Binding CurrentOcuupation,Mode=OneWay}" Width="1*"/>
             </DataGrid.Columns>
 
         </DataGrid>
@@ -49,7 +50,8 @@
         <TextBox  Name="LName" Text="{Binding LastName}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" />
         <Button Name="Remove" Background="Red" Foreground="White" Grid.Column="1" Grid.Row="3" Content="Remove" Click="Remove_Click"/>
         <Button Name="Add" Background="Green" Foreground="White" Grid.Column="1" Grid.Row="4" Content="Add" Click="Add_Click"/>
-    
-        <!--<TextBlock Text="Some" Grid.Row="2" Grid.Column="2" FontSize="20" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="Blue" Margin="88.6,16.6,87.6,16.4"/>-->
+        <ComboBox Name="OccupationCombo" Grid.Row="7" Grid.Column="1"></ComboBox>
+
+        <Button Content="Class" Name="NewClass" Grid.Column="1" Grid.Row="8" Click="NewClass_Click"></Button>
     </Grid>
 </Window>
