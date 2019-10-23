@@ -44,12 +44,18 @@ namespace LearningWpf
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-         
-
-            PeopleManager.people.Add(new Person(test.Text,test1.Text));
-            UpdateDataGrid();
-  
-
+           
+            if (FName.Text == "" && LName.Text == "")
+            {
+                MessageBox.Show("Please Enter FirstName and Last Name","Empty Fields");
+            }
+            else
+            {
+                PeopleManager.people.Add(new Person(FName.Text, LName.Text));
+                UpdateDataGrid();
+                FName.Text = "";
+                LName.Text = "";
+            }
         }
         private void UpdateDataGrid()
         {

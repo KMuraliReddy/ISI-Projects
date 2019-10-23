@@ -43,10 +43,12 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <TextBox  Name="test" Text="{Binding FirstName}"  Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" />
-        <TextBox  Name="test1" Text="{Binding LastName}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" />
-        <Button Name="Remove" Grid.Column="1" Grid.Row="3" Content="Remove" Click="Remove_Click"/>
-        <Button Name="Add" Grid.Column="1" Grid.Row="4" Content="Add" Click="Add_Click"/>
+        <TextBlock Name="FNameLabel" Grid.Column="1" Grid.Row="5" Text="FName"/>
+        <TextBlock Name="LNameLabel" Grid.Column="1" Grid.Row="6" Text="LName"/>
+        <TextBox  Name="FName" Text="{Binding FirstName}"  Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" />
+        <TextBox  Name="LName" Text="{Binding LastName}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" />
+        <Button Name="Remove" Background="Red" Foreground="White" Grid.Column="1" Grid.Row="3" Content="Remove" Click="Remove_Click"/>
+        <Button Name="Add" Background="Green" Foreground="White" Grid.Column="1" Grid.Row="4" Content="Add" Click="Add_Click"/>
     
         <!--<TextBlock Text="Some" Grid.Row="2" Grid.Column="2" FontSize="20" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="Blue" Margin="88.6,16.6,87.6,16.4"/>-->
     </Grid>
