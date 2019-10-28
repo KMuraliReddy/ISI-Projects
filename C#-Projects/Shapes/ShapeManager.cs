@@ -49,18 +49,16 @@ namespace Shapes
             rightTriangle.Add(new RightTriAngle(9, 10));
             rightTriangle.Add(new RightTriAngle(11, 12));
 
-            square.Add(new Square(5));
-            square.Add(new Square(8));
-            square.Add(new Square(13));
-            square.Add(new Square(15));
+            square.Add(new Square(5,5));
+            square.Add(new Square(8,5));
+            square.Add(new Square(13,5));
+            square.Add(new Square(15,5));
 
             for(int i = 0; i < circle.Count; i++)
             {
                 square_area = square_area + circle[i].ReturnArea();
             }
            
-
-
             foreach (Square s in square)
             {
 
@@ -83,8 +81,6 @@ namespace Shapes
                 RightTriangle_perimeter = RightTriangle_perimeter + rt.CalculatePerimeter();
             }
            
-
-
             Console.WriteLine("Circle Area And Perimeters Are : " + circle_area + " :" + circle_perimeter);
             Console.WriteLine("Rectangle Area And Perimeters Are : " + rectangle_area + " :" + rectangle_perimeter);
             Console.WriteLine("RightTriangle Area And Perimeters Are : " + RightTriangle_area + " :" + RightTriangle_perimeter);
@@ -104,7 +100,7 @@ namespace Shapes
         }
         public static float ReturnTotalPerimeter()
         {
-
+            return 0;
         }
     }
 }

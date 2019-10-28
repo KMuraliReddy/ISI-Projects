@@ -35,20 +35,24 @@ namespace FinalPRoject_Group9
             MessageBox.Show(libraryContents.SelectedCells.Count().ToString());
             if ( libraryContents.SelectedCells.Count() > 0 && libraryMembers.SelectedCells.Count() > 0)
             {
-              
 
+                MessageBox.Show("Lent Media is Succesful");
             }
-            foreach (DataRowView rowView in libraryContents.SelectedItems)
+            
+            // MessageBox.Show(libraryContents.SelectedCells.Clear());
+            var items = libraryContents.SelectedItems;
+            for(int i = 0; i < items.Count; i++)
             {
-                if (rowView != null)
-                {
-                    DataRow row = rowView.Row;
-                    MessageBox.Show( row.ItemArray[3].ToString());
-                   // MessageBox.Show(emailAdd.ToString());
-                }
-
+                MessageBox.Show(i.ToString());
             }
-
+            //foreach (DataRowView item in items)
+            //{
+            //    var clRootSiteId = item["Type"];
+            //    var clSiteRootUrl = item["Title"];
+            //    MessageBox.Show(clRootSiteId.ToString());
+            //    MessageBox.Show(clSiteRootUrl.ToString());
+            //}
+            
         }
     }
 }

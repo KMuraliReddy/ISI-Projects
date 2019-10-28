@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    class Rectangle : Shape
+    class Rectangle : Polygon
     {
         public float length { get; private set; }
         public float width { get; private set; }
         public static int rectangleCount = 0;
-        public Rectangle(float length,float width)
+        public Rectangle(float length,float width):base()
         {
             this.length = length;
             this.width = width;

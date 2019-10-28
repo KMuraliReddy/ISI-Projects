@@ -12,13 +12,7 @@ namespace Shapes
         public float apothem { get; private set; }
         public int numberOfSides { get; private set; }
         public float lengthOfside { get; private set; }
-        public Polygon(float polygonPerimeter,float apothem,int numberOfSide,float lengthOfside)
-        {
-            this.apothem = apothem;
-            this.polygonPerimeter = polygonPerimeter;
-            this.numberOfSides = numberOfSide;
-            this.lengthOfside = lengthOfside;
-        }
+       
         public override float ReturnPerimeter()
         {
             return numberOfSides * lengthOfside;

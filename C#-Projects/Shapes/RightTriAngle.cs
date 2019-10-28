@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    class RightTriAngle
+    class RightTriAngle :Polygon
     {
         public float rightTriangle_Base { get; private set; }
             public float height { get; private set; }
-        public static int rightTriangleCount = 0; 
-        public RightTriAngle(float rightTriangle_Base, float height)
+        public static int rightTriangleCount = 0;
+        public RightTriAngle(float rightTriangle_Base, float height) : base() 
         {
             this.rightTriangle_Base = rightTriangle_Base;
             this.height = height;
