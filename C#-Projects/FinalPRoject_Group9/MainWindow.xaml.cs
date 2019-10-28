@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,32 @@ namespace FinalPRoject_Group9
         public MainWindow()
         {
             InitializeComponent();
+            
+            
+                libraryMembers.ItemsSource = Library.libraryMembers;
+                libraryContents.ItemsSource = Library.members;
+        }
+
+        private void LentMedia_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(libraryContents.SelectedCells.Count().ToString());
+            if ( libraryContents.SelectedCells.Count() > 0 && libraryMembers.SelectedCells.Count() > 0)
+            {
+              
+
+            }
+            foreach (DataRowView rowView in libraryContents.SelectedItems)
+            {
+                if (rowView != null)
+                {
+                    DataRow row = rowView.Row;
+                    MessageBox.Show( row.ItemArray[3].ToString());
+                   // MessageBox.Show(emailAdd.ToString());
+                }
+
+            }
+
         }
     }
 }
+

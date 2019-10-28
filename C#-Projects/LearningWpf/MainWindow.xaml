@@ -50,7 +50,7 @@
         <TextBox  Name="LName" Text="{Binding LastName}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" />
         <Button Name="Remove" Background="Red" Foreground="White" Grid.Column="1" Grid.Row="3" Content="Remove" Click="Remove_Click"/>
         <Button Name="Add" Background="Green" Foreground="White" Grid.Column="1" Grid.Row="4" Content="Add" Click="Add_Click"/>
-        <ComboBox Name="OccupationCombo" Grid.Row="7" Grid.Column="1"></ComboBox>
+        <ComboBox Name="OccupationCombo" Grid.Row="7" Grid.Column="1" Text="Drop"></ComboBox>
 
         <Button Content="Class" Name="NewClass" Grid.Column="1" Grid.Row="8" Click="NewClass_Click"></Button>
     </Grid>
