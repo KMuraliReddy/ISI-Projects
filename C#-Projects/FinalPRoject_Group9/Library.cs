@@ -6,33 +6,10 @@ using System.Threading.Tasks;
 
 namespace FinalPRoject_Group9
 {
-    class Library
+    static class Library
     {
-    //    public static List<Book> book = new List<Book>()
-    //    {
-    //    new Book("Themro Dynamics"),
-    //    new Book("Laws Of Motion"),
-    //    new Book("Radio Activities"),
-    //    new Book("Origin Of Species"),
-    //    new Book("The Invention Of Zero")
-    //};
-    //    public static List<Magazine> magazine = new List<Magazine>()
-    //    {
-    //    new Magazine("Canadian Living"),
-    //    new Magazine("Fashion"),
-    //    new Magazine("The Economy(Canadian Business)"),
-    //    new Magazine("SPORTS"),
-    //    new Magazine("OutDoor Canada")
-    //};
-    //    public static List<Movie> movie = new List<Movie>()
-    //    {
-    //    new Movie("Bahubali"),
-    //    new Movie("Arjun Reddy"),
-    //    new Movie("Sahoo"),
-    //    new Movie("Enemy At The Gates"),
-    //    new Movie("American Sniper")
-    //};
-        public static List<LibraryMember> libraryMembers = new List<LibraryMember>()
+  
+        public static  List<LibraryMember> libraryMembers = new List<LibraryMember>()
         {
         new LibraryMember("Albert Einstein"),
         new LibraryMember("Isaac Newton"),
@@ -41,23 +18,23 @@ namespace FinalPRoject_Group9
         new LibraryMember("Ramanujan")
     };
 
-        public static List<Media> members = new List<Media>()
+        public static List<Media> media = new List<Media>()
         {
-        new Book("Themro Dynamics","Book",true),
-        new Book("Laws Of Motion","Book",true),
-        new Book("Radio Activities","Book",true),
-        new Book("Origin Of Species","Book",true),
-        new Book("The Invention Of Zero","Book",true),
-        new Movie("Bahubali","Movie",true),
-        new Movie("Arjun Reddy","Movie",true),
-        new Movie("Sahoo","Movie",true),
-        new Movie("Enemy At The Gates","Movie",true),
-        new Movie("American Sniper","Movie",true),
-        new Magazine("Canadian Living","Magazine",true),
-        new Magazine("Fashion","Magazine",true),
-        new Magazine("The Economy","Magazine",true),
-        new Magazine("SPORTS","Magazine",true),
-        new Magazine("OutDoor Canada","Magazine",true)
+        new Book("Themro Dynamics","Book",64),
+        new Book("Laws Of Motion","Book",56),
+        new Book("Radio Activities","Book",56),
+        new Book("Origin Of Species","Book",56),
+        new Book("The Invention Of Zero","Book",56),
+        new Movie(5,"Bahubali","Movie"),
+        new Movie(5,"Arjun Reddy","Movie"),
+        new Movie(6,"Sahoo","Movie"),
+        new Movie(7,"Enemy At The Gates","Movie"),
+        new Movie(8,"American Sniper","Movie"),
+        new Magazine("Canadian Living","Magazine",150),
+        new Magazine("Fashion","Magazine",89),
+        new Magazine("The Economy","Magazine",635),
+        new Magazine("SPORTS","Magazine",235),
+        new Magazine("Incredible INDIA","Magazine",568)
         };
     }
 }

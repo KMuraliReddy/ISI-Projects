@@ -8,14 +8,11 @@ namespace FinalPRoject_Group9
 {
     class Magazine : Book
     {
-        public string Title { get; private set; }
-        public Boolean IsAvailable { get;  set; }
-        public string Type { get; private set; }
-        public Magazine(string magazineTitle,string type,bool isAvilable) : base(magazineTitle,type,isAvilable)
+        public int PageCount;
+        public Magazine(string title,string type,int pageCount) : base(title,"Magazine", pageCount)
         {
-            Title = magazineTitle;
-            Type = type;
-            IsAvailable = isAvilable;
+            PageCount = pageCount;
+            
 
         }
     }

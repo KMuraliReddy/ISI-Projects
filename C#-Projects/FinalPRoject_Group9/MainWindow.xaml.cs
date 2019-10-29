@@ -24,35 +24,67 @@ namespace FinalPRoject_Group9
         public MainWindow()
         {
             InitializeComponent();
-            
-            
-                libraryMembers.ItemsSource = Library.libraryMembers;
-                libraryContents.ItemsSource = Library.members;
+            libraryMembers.ItemsSource = Library.libraryMembers;
+            libraryContents.ItemsSource = Library.media;
         }
-
         private void LentMedia_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(libraryContents.SelectedCells.Count().ToString());
-            if ( libraryContents.SelectedCells.Count() > 0 && libraryMembers.SelectedCells.Count() > 0)
-            {
 
-                MessageBox.Show("Lent Media is Succesful");
-            }
-            
-            // MessageBox.Show(libraryContents.SelectedCells.Clear());
-            var items = libraryContents.SelectedItems;
-            for(int i = 0; i < items.Count; i++)
+            if (libraryContents.SelectedCells.Count() > 0 && libraryMembers.SelectedCells.Count() > 0)
             {
-                MessageBox.Show(i.ToString());
+                Media media = (Media)libraryContents.SelectedItem;
+                if (((Media)libraryContents.SelectedItem).isAvailable == true)
+                {
+                    ((Media)libraryContents.SelectedItem).isAvailable = false;
+                    LibraryMember libraryMemeber = (LibraryMember)libraryMembers.SelectedItem;
+                    ((Media)libraryContents.SelectedItem).libraryMember = libraryMemeber.name;
+                    MessageBox.Show(libraryMemeber.name + " has lent the " + media.mediaType + " : " + media.title);
+                    UpdateGrid();
+                }
+                else
+                {
+                    DisplayInfo("The Media Is Not Available");
+                }
             }
-            //foreach (DataRowView item in items)
-            //{
-            //    var clRootSiteId = item["Type"];
-            //    var clSiteRootUrl = item["Title"];
-            //    MessageBox.Show(clRootSiteId.ToString());
-            //    MessageBox.Show(clSiteRootUrl.ToString());
-            //}
-            
+            else
+            {
+                DisplayInfo("Select Name and Media to lent");
+            }
+        }
+        private void returnMedia_Click(object sender, RoutedEventArgs e)
+        {
+            Media media = (Media)libraryContents.SelectedItem;
+            LibraryMember libraryMemeber = (LibraryMember)libraryMembers.SelectedItem;
+            if (libraryContents.SelectedCells.Count() > 0 && libraryMembers.SelectedCells.Count() > 0)
+            {
+                if (((Media)libraryContents.SelectedItem).isAvailable == false && media.libraryMember == libraryMemeber.name)
+                {
+                    ((Media)libraryContents.SelectedItem).isAvailable = true;
+                    ((Media)libraryContents.SelectedItem).libraryMember = "";
+                    UpdateGrid();
+                }
+                else
+                {
+                    DisplayInfo("The Media Is Avilable In The Library, You Can't Return This Media / The Mebmer You Choose Didnt Lent This Media ");
+                }
+            }
+            else
+            {
+                DisplayInfo("Select Name of the library memebr and Media to return");
+            }
+
+        }
+        private void DisplayInfo(string message)
+        {
+            MessageBox.Show(message);
+        }
+        private void UpdateGrid()
+        {
+            libraryContents.UnselectAllCells();
+            libraryMembers.UnselectAllCells();
+            libraryContents.ItemsSource = null;
+            libraryContents.ItemsSource = Library.media;
+
         }
     }
 }

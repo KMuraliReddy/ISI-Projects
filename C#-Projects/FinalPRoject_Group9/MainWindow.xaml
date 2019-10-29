@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalPRoject_Group9"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="500" Width="800">
     <Grid>
 
         <Grid.ColumnDefinitions  >
@@ -37,21 +37,21 @@
         </Grid.RowDefinitions>
         <TextBlock Name="libraryMenu" Background="White" Text="Library Menu" Grid.Row="1" Grid.Column="1"></TextBlock>
         <Button Name="LentMedia" Content="Lent Media" Grid.Row="2" Grid.Column="1" Click="LentMedia_Click" ></Button>
-        <Button Name="returnMedia" Content="Return Media" Grid.Row="3" Grid.Column="1"></Button>
+        <Button Name="returnMedia" Content="Return Media" Grid.Row="3" Grid.Column="1" Click="returnMedia_Click"></Button>
         <Button Name="mediaInfo" Content="Media Info" Grid.Row="4" Grid.Column="1" ></Button>
         <Button Name="memberInfo" Content="Member Info" Grid.Row="5" Grid.Column="1" ></Button>
 
         <DataGrid Name="libraryMembers"  Grid.RowSpan="5" MaxWidth="100" Grid.ColumnSpan="1" Grid.Column="1"  Grid.Row="5" AutoGenerateColumns="False" Margin="0.2,63.6,0.2,10.4">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding libraryMember,Mode=OneWay}"   Width="1*" />
+                <DataGridTextColumn Header="Name" Binding="{Binding name,Mode=OneWay}"   Width="1*" />
             </DataGrid.Columns>
 
         </DataGrid>
         <DataGrid Name="libraryContents"  Grid.RowSpan="11" MaxWidth="600" Grid.ColumnSpan="5" Grid.Column="2"  Grid.Row="0" AutoGenerateColumns="False" Margin="0.2,63.6,0.2,10.4">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Title" Binding="{Binding Title,Mode=OneWay}"  x:Name="title"  Width="1*" />
-                <DataGridTextColumn Header="Type" Binding="{Binding Type,Mode=OneWay}"   Width="1*" />
-                <DataGridCheckBoxColumn Header="Avilability" Binding="{Binding IsAvailable,Mode=OneWay}"   Width="1*" />
+                <DataGridTextColumn Header="Title" Binding="{Binding title,Mode=OneWay}"  x:Name="title"  Width="1*" />
+                <DataGridTextColumn Header="Type" Binding="{Binding mediaType,Mode=OneWay}"   Width="1*" />
+                <DataGridCheckBoxColumn Header="Avilability" Binding="{Binding isAvailable,Mode=OneWay}"   Width="1*" />
                 <DataGridTextColumn Header="Borrower" Binding="{Binding libraryMember,Mode=OneWay}"   Width="1*" />
             </DataGrid.Columns>
 

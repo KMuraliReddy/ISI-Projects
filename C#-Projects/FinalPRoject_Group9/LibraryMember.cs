@@ -8,10 +8,10 @@ namespace FinalPRoject_Group9
 {
     class LibraryMember
     {
-        public string libraryMember { get;  private set ; }
+        public string name { get;   set ; }
         public LibraryMember(string libraryMemeber)
         {
-            this.libraryMember = libraryMemeber;
+            this.name = libraryMemeber;
 
         }
     }

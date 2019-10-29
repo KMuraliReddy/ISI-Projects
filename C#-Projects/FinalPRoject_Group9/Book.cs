@@ -8,15 +8,15 @@ namespace FinalPRoject_Group9
 {
     class Book : Media
     {
-        public string Title { get; private set; }
-        public string pageCount { get; private set; }
-        public Boolean IsAvailable { get;  set; }
-        public string Type { get; private set; }
-        public Book(string bookTitle,string type,bool isAvilable)
+       
+        public int pageCount { get; private set; }
+       
+        
+        public Book(string title,string type,int pagecount):base(title,type)
         {
-            Title = bookTitle;
-            Type = type;
-            IsAvailable = isAvilable;
+            pageCount = pagecount;
+         
+            
         }
     }
 }

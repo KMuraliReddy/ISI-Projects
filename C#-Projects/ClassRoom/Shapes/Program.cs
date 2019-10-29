@@ -10,10 +10,10 @@ namespace Shapes
     {
         static void Main(string[] args)
         {
-            string name = null;
+            
             int[] arr = new int[5];
             Console.WriteLine(arr[0]+"murali");
-            float d = 6.555f;
+         
             
            
             List<Circle> circle = new List<Circle>();
@@ -28,24 +28,19 @@ namespace Shapes
             float rectangle_perimeter = 0;
             float RightTriangle_area = 0;
             float RightTriangle_perimeter = 0;
-
             //circle.Add(new Circle(float.Parse(circle[0].ToString())).CalculateArea());
             circle.Add(new Circle(5));
             circle.Add(new Circle(6));
             circle.Add(new Circle(7));
             circle.Add(new Circle(8));
-
-
             rectangle.Add(new Rectangle(5, 6));
             rectangle.Add(new Rectangle(7, 8));
             rectangle.Add(new Rectangle(9, 10));
             rectangle.Add(new Rectangle(11, 12));
-
             rightTriangle.Add(new RightTriangle(5, 6));
             rightTriangle.Add(new RightTriangle(7, 8));
             rightTriangle.Add(new RightTriangle(9, 10));
             rightTriangle.Add(new RightTriangle(11, 12));
-
             square.Add(new Square(5));
             square.Add(new Square(8));
             square.Add(new Square(13));

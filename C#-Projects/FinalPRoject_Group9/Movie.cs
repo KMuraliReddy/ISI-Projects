@@ -8,15 +8,14 @@ namespace FinalPRoject_Group9
 {
     class Movie : Media
     {
-        public string Title { get; private set; }
-        public Boolean IsAvailable { get;  set; }
-        public string Type { get; private set; }
+      
+        
         public float runTime { get; private set; }
-        public Movie(string movieTitle,string type,bool isAvilable)
+        
+        public Movie(float Runtime,string Title,string type):base(Title,"Movie")
         {
-            Title = movieTitle;
-            Type = type;
-            IsAvailable = isAvilable;
+            runTime = Runtime;
+           
 
 
         }
