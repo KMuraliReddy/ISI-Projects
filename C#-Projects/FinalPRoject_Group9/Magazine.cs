@@ -15,5 +15,9 @@ namespace FinalPRoject_Group9
             
 
         }
+        public override string MediaInfo()
+        {
+            return base.MediaInfo()+""+pageCount;
+        }
     }
 }

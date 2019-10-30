@@ -14,5 +14,18 @@ namespace FinalPRoject_Group9
             this.name = libraryMemeber;
 
         }
+
+       public  static List<Media> borrowHistory = new List<Media>();
+        
+       public static  List<Media> currentlyBorrowd = new List<Media>();
+        public static string MemberInfo()
+        {
+            string s = "";
+            foreach(Media m in borrowHistory)
+            {
+                s = s + m.libraryMember+ " : "+m.mediaType+" : " +m.title;
+            }
+            return s ;
+        }
     }
 }

@@ -4,9 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalPRoject_Group9"
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
+    <Window.Resources>
+        <!-- DataGrid style -->
+        <Style x:Key="DataGridStyle1" TargetType="{x:Type DataGrid}">
+            <Setter Property="ColumnHeaderStyle" Value="{DynamicResource CustomColumnHeaderStyle}"/>
+        </Style>
+        <!-- DataGridColumnHeader style -->
+        <Style x:Key="CustomColumnHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="FontSize" Value="18" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="ToolTip" Value="Click to sort."/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <!--<ImageBrush ImageSource="library_img.PNG" Stretch="UniformToFill"/>-->
+            <ImageBrush ImageSource="pack://application:,,,/images/Online_Library.jpg"  Stretch="UniformToFill"/>
+        </Grid.Background>
 
         <Grid.ColumnDefinitions  >
 
@@ -35,25 +58,49 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock Name="libraryMenu" Background="White" Text="Library Menu" Grid.Row="1" Grid.Column="1"></TextBlock>
-        <Button Name="LentMedia" Content="Lent Media" Grid.Row="2" Grid.Column="1" Click="LentMedia_Click" ></Button>
-        <Button Name="returnMedia" Content="Return Media" Grid.Row="3" Grid.Column="1" Click="returnMedia_Click"></Button>
-        <Button Name="mediaInfo" Content="Media Info" Grid.Row="4" Grid.Column="1" ></Button>
-        <Button Name="memberInfo" Content="Member Info" Grid.Row="5" Grid.Column="1" ></Button>
+       
+        <TextBlock Name="libraryMenu"  Foreground="Blue" FontSize="26" FontWeight="Bold"  Text="Library Management" Grid.Row="0" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3"></TextBlock>
+        <Button Name="LendMedia" Content="Lend Media" BorderThickness="0" Foreground="Green" FontWeight="Bold" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="2" Background="Transparent" Click="LentMedia_Click" />
+        <Button Name="returnMedia" Content="Return Media" BorderThickness="0" Foreground="Red" FontWeight="Bold" Grid.Row="11" Grid.Column="4" Grid.ColumnSpan="2" Background="Transparent" Click="returnMedia_Click"></Button>
+        <Button Name="mediaInfo" Content="Media Info" BorderThickness="0" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Background="Transparent" Click="mediaInfo_Click" ></Button>
+        <Button Name="memberInfo" Content="Member Info" BorderThickness="0"  FontWeight="Bold" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="Transparent" Click="memberInfo_Click" >
+            
+        </Button>
 
-        <DataGrid Name="libraryMembers"  Grid.RowSpan="5" MaxWidth="100" Grid.ColumnSpan="1" Grid.Column="1"  Grid.Row="5" AutoGenerateColumns="False" Margin="0.2,63.6,0.2,10.4">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding name,Mode=OneWay}"   Width="1*" />
+        <DataGrid Name="libraryMembers" GridLinesVisibility="None"  Style="{DynamicResource DataGridStyle1}" Foreground="Green"  FontWeight="Bold" FontFamily="Parsons" Background="Transparent" RowBackground="Transparent" Grid.RowSpan="4" MaxWidth="100"  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" AutoGenerateColumns="False" SelectedIndex="0"  >
+           
+            <DataGrid.Columns> 
+                
+                <DataGridTextColumn Header="Name" Binding="{Binding name,Mode=OneWay}"   Width="1*"  />
+                
+               
             </DataGrid.Columns>
-
+           
         </DataGrid>
-        <DataGrid Name="libraryContents"  Grid.RowSpan="11" MaxWidth="600" Grid.ColumnSpan="5" Grid.Column="2"  Grid.Row="0" AutoGenerateColumns="False" Margin="0.2,63.6,0.2,10.4">
+
+        <DataGrid Name="libraryContents" FontWeight="Bold" Style="{DynamicResource DataGridStyle1}" GridLinesVisibility="None" FontSize="14" Foreground="Black" FontFamily="Parsons"  Background="Transparent" RowBackground="Transparent" Grid.RowSpan="11" MaxWidth="600" Grid.ColumnSpan="5" Grid.Column="2"  Grid.Row="0" AutoGenerateColumns="False" Margin="0.2,63.6,0.2,10.4" >
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding isAvailable}" Value="False">
+                            <Setter Property="Foreground" Value="Red"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
             <DataGrid.Columns>
+                
                 <DataGridTextColumn Header="Title" Binding="{Binding title,Mode=OneWay}"  x:Name="title"  Width="1*" />
+               
                 <DataGridTextColumn Header="Type" Binding="{Binding mediaType,Mode=OneWay}"   Width="1*" />
-                <DataGridCheckBoxColumn Header="Avilability" Binding="{Binding isAvailable,Mode=OneWay}"   Width="1*" />
+                <DataGridCheckBoxColumn Header="Avilability" Binding="{Binding isAvailable,Mode=OneWay}"   Width="1*"/>
+
+
+
+
                 <DataGridTextColumn Header="Borrower" Binding="{Binding libraryMember,Mode=OneWay}"   Width="1*" />
             </DataGrid.Columns>
+           
 
         </DataGrid>
     </Grid>

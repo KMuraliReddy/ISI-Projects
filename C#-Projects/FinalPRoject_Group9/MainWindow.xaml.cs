@@ -25,21 +25,28 @@ namespace FinalPRoject_Group9
         {
             InitializeComponent();
             libraryMembers.ItemsSource = Library.libraryMembers;
+
             libraryContents.ItemsSource = Library.media;
         }
         private void LentMedia_Click(object sender, RoutedEventArgs e)
         {
 
-            if (libraryContents.SelectedCells.Count() > 0 && libraryMembers.SelectedCells.Count() > 0)
+
+            if (libraryContents.SelectedItem != null && libraryMembers.SelectedItem != null)
             {
+                LibraryMember libraryMemeber = (LibraryMember)libraryMembers.SelectedItem;
                 Media media = (Media)libraryContents.SelectedItem;
                 if (((Media)libraryContents.SelectedItem).isAvailable == true)
                 {
+                    LibraryMember.borrowHistory.Add(media);
+                    LibraryMember.currentlyBorrowd.Add(media);
+                    Library.media.Remove(((Media)libraryContents.SelectedItem));
+                    Library.media.Add(((Media)libraryContents.SelectedItem));
                     ((Media)libraryContents.SelectedItem).isAvailable = false;
-                    LibraryMember libraryMemeber = (LibraryMember)libraryMembers.SelectedItem;
                     ((Media)libraryContents.SelectedItem).libraryMember = libraryMemeber.name;
-                    MessageBox.Show(libraryMemeber.name + " has lent the " + media.mediaType + " : " + media.title);
+                    MessageBox.Show(libraryMemeber.name + " has lend the " + media.mediaType + " : " + media.title);
                     UpdateGrid();
+
                 }
                 else
                 {
@@ -48,19 +55,24 @@ namespace FinalPRoject_Group9
             }
             else
             {
-                DisplayInfo("Select Name and Media to lent");
+                DisplayInfo("Select Name and Media to lend");
             }
         }
         private void returnMedia_Click(object sender, RoutedEventArgs e)
         {
+
             Media media = (Media)libraryContents.SelectedItem;
             LibraryMember libraryMemeber = (LibraryMember)libraryMembers.SelectedItem;
-            if (libraryContents.SelectedCells.Count() > 0 && libraryMembers.SelectedCells.Count() > 0)
+            LibraryMember.currentlyBorrowd.Remove(media);
+            if (libraryContents.SelectedItem!=null && libraryMembers.SelectedItem!=null)
             {
                 if (((Media)libraryContents.SelectedItem).isAvailable == false && media.libraryMember == libraryMemeber.name)
                 {
+                    Library.media.Remove(((Media)libraryContents.SelectedItem));
                     ((Media)libraryContents.SelectedItem).isAvailable = true;
                     ((Media)libraryContents.SelectedItem).libraryMember = "";
+                    Library.media.Remove(((Media)libraryContents.SelectedItem));
+                    Library.media.Insert(0, (((Media)libraryContents.SelectedItem)));
                     UpdateGrid();
                 }
                 else
@@ -74,10 +86,7 @@ namespace FinalPRoject_Group9
             }
 
         }
-        private void DisplayInfo(string message)
-        {
-            MessageBox.Show(message);
-        }
+       
         private void UpdateGrid()
         {
             libraryContents.UnselectAllCells();
@@ -86,6 +95,55 @@ namespace FinalPRoject_Group9
             libraryContents.ItemsSource = Library.media;
 
         }
+
+        private void memberInfo_Click(object sender, RoutedEventArgs e)
+        {
+            string name = "";
+
+            string title = "";
+            string type = "";
+
+            foreach (Media m in LibraryMember.borrowHistory)
+            {
+                name = m.libraryMember;
+                title = m.title;
+                type = m.mediaType;
+                DisplayInfo("Member History" + Environment.NewLine + "Name :" + name + Environment.NewLine + " Title : " + title + Environment.NewLine + "Type : " + type + Environment.NewLine);
+            }
+
+            foreach (Media m in LibraryMember.currentlyBorrowd)
+            {
+                name = m.libraryMember;
+                title = m.title;
+                type = m.mediaType;
+                DisplayInfo("Currently Borrowing" + Environment.NewLine + "Name :" + name + Environment.NewLine + " Title : " + title + Environment.NewLine + "Type : " + type + Environment.NewLine);
+            }
+        }
+
+        private void mediaInfo_Click(object sender, RoutedEventArgs e)
+        {
+            if (libraryContents.SelectedCells.Count() > 0)
+            {
+                Media media = (Media)libraryContents.SelectedItem;
+
+
+                foreach (Media m in LibraryMember.currentlyBorrowd)
+                {
+                
+
+                }
+            }
+            else
+            {
+                DisplayInfo("Please Select A Media");
+            }
+
+        }
+        private void DisplayInfo(string message)
+        {
+            MessageBox.Show(message);
+        }
+
     }
 }
 

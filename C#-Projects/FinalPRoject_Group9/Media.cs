@@ -20,9 +20,9 @@ namespace FinalPRoject_Group9
             mediaType = type;
         }
 
-        public void addDataToDataGrid()
+       public virtual string   MediaInfo()
         {
-           
+            return title + "" + mediaType + "   " + serialNumber + "   " + isAvailable + "   " + numberOfTimesLent;
         }
 
     }
