@@ -64,7 +64,7 @@ namespace FinalPRoject_Group9
             Media media = (Media)libraryContents.SelectedItem;
             LibraryMember libraryMemeber = (LibraryMember)libraryMembers.SelectedItem;
             LibraryMember.currentlyBorrowd.Remove(media);
-            if (libraryContents.SelectedItem!=null && libraryMembers.SelectedItem!=null)
+            if (libraryContents.SelectedItem != null && libraryMembers.SelectedItem != null)
             {
                 if (((Media)libraryContents.SelectedItem).isAvailable == false && media.libraryMember == libraryMemeber.name)
                 {
@@ -86,7 +86,7 @@ namespace FinalPRoject_Group9
             }
 
         }
-       
+
         private void UpdateGrid()
         {
             libraryContents.UnselectAllCells();
@@ -129,7 +129,7 @@ namespace FinalPRoject_Group9
 
                 foreach (Media m in LibraryMember.currentlyBorrowd)
                 {
-                
+
 
                 }
             }

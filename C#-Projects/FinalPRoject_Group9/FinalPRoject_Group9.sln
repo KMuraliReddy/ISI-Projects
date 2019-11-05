@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceExercise", "Interf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalPRoject_Group9", "FinalPRoject_Group9.csproj", "{2F167FA6-8EE9-4235-9027-1470AD0FB240}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningWpf", "..\LearningWpf\LearningWpf.csproj", "{D8AF5008-88E5-42B5-9B83-A3762FA86CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics", "..\ClassRoom\Basics\Basics.csproj", "{9281DAB8-F5C9-4A1D-8054-D1F982FC3259}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{2F167FA6-8EE9-4235-9027-1470AD0FB240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F167FA6-8EE9-4235-9027-1470AD0FB240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F167FA6-8EE9-4235-9027-1470AD0FB240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8AF5008-88E5-42B5-9B83-A3762FA86CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8AF5008-88E5-42B5-9B83-A3762FA86CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8AF5008-88E5-42B5-9B83-A3762FA86CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8AF5008-88E5-42B5-9B83-A3762FA86CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9281DAB8-F5C9-4A1D-8054-D1F982FC3259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9281DAB8-F5C9-4A1D-8054-D1F982FC3259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9281DAB8-F5C9-4A1D-8054-D1F982FC3259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9281DAB8-F5C9-4A1D-8054-D1F982FC3259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

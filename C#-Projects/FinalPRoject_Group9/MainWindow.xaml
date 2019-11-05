@@ -62,7 +62,7 @@
         <TextBlock Name="libraryMenu"  Foreground="Blue" FontSize="26" FontWeight="Bold"  Text="Library Management" Grid.Row="0" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3"></TextBlock>
         <Button Name="LendMedia" Content="Lend Media" BorderThickness="0" Foreground="Green" FontWeight="Bold" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="2" Background="Transparent" Click="LentMedia_Click" />
         <Button Name="returnMedia" Content="Return Media" BorderThickness="0" Foreground="Red" FontWeight="Bold" Grid.Row="11" Grid.Column="4" Grid.ColumnSpan="2" Background="Transparent" Click="returnMedia_Click"></Button>
-        <Button Name="mediaInfo" Content="Media Info" BorderThickness="0" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Background="Transparent" Click="mediaInfo_Click" ></Button>
+        <Button Name="mediaInfo" Content="Media Info" BorderThickness="0" Foreground="Yellow" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Background="Transparent" Click="mediaInfo_Click" ></Button>
         <Button Name="memberInfo" Content="Member Info" BorderThickness="0"  FontWeight="Bold" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="Transparent" Click="memberInfo_Click" >
             
         </Button>

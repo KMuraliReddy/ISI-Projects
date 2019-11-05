@@ -1,0 +1,71 @@
+﻿<Window x:Class="PhoneBookApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneBookApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions  >
+
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="FirstName" Text="First Name :" FontSize="16" FontWeight="Bold" Grid.Column="1" Grid.Row="1"></TextBlock>
+        <TextBlock Name="LastName" Text="Last Name :" FontSize="16" FontWeight="Bold" Grid.Column="1" Grid.Row="3"></TextBlock>
+        <TextBlock Name="Phone" Text="Phone # :" FontSize="16" FontWeight="Bold" Grid.Column="1" Grid.Row="5"></TextBlock>
+        <TextBox Name="FirstNameValue" Grid.Row="1" Grid.Column="2"></TextBox>
+        <TextBox Name="LastNameValue" Grid.Row="3" Grid.Column="2"></TextBox>
+        <TextBox Name="PhoneValue" Grid.Row="5" Grid.Column="2"></TextBox>
+        <Button Name="AddNewListing" Grid.Row="7" Grid.Column="1" Content="Add New Listing" Grid.ColumnSpan="2" Click="AddNewListing_Click"/>
+        <TextBlock Name="LastNameSearch" Text="Last Name :" FontSize="16" FontWeight="Bold" Grid.Column="1" Grid.Row="8"></TextBlock>
+        <TextBox Name="LastNameValueSearch" Grid.Row="8" Grid.Column="2"></TextBox>
+        <Button Name="RemoveListing" Grid.Row="9" Grid.Column="4" Content="Remove Selected User" Grid.ColumnSpan="2" Click="RemoveListing_Click" />
+        <Button Name="SearchListing" Grid.Row="9" Grid.Column="1" Content="Search PhoneBook" Grid.ColumnSpan="2" Click="SearchListing_Click"  />
+        <DataGrid Name="PhonebookListing" FontWeight="Bold"  FontSize="14" Foreground="Black" FontFamily="Parsons"  Background="Transparent" RowBackground="Transparent" Grid.RowSpan="8" MaxWidth="600" Grid.ColumnSpan="4" Grid.Column="3"  Grid.Row="1" AutoGenerateColumns="False"  >
+           
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName,Mode=OneWay}"   Width="1*" />
+
+                <DataGridTextColumn Header="LastName" Binding="{Binding LastName,Mode=OneWay}"   Width="1*" />
+                <DataGridTextColumn Header="Phone" Binding="{Binding PhoneNumber,Mode=OneWay}"   Width="1*"/>
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <DataGrid Name="SearchList"   FontWeight="Bold"   RowBackground="Transparent" Grid.RowSpan="5" MaxWidth="300"  Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="10" AutoGenerateColumns="False"  >
+            <DataGrid.Columns>
+            <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName,Mode=OneWay}"   Width="1*" />
+            <DataGridTextColumn Header="LastName" Binding="{Binding LastName,Mode=OneWay}"   Width="1*" />
+            <DataGridTextColumn Header="Phone" Binding="{Binding PhoneNumber,Mode=OneWay}"   Width="1*"/>
+                </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
